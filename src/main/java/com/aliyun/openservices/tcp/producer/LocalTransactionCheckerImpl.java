@@ -1,4 +1,4 @@
-package com.aliyun.openservices.tcp.example.producer;
+package com.aliyun.openservices.tcp.producer;
 
 import com.aliyun.openservices.ons.api.Message;
 import com.aliyun.openservices.ons.api.transaction.LocalTransactionChecker;

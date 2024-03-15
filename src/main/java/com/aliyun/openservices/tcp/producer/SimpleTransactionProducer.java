@@ -1,4 +1,4 @@
-package com.aliyun.openservices.tcp.example.producer;
+package com.aliyun.openservices.tcp.producer;
 
 import com.aliyun.openservices.ons.api.Message;
 import com.aliyun.openservices.ons.api.ONSFactory;
@@ -8,7 +8,7 @@ import com.aliyun.openservices.ons.api.exception.ONSClientException;
 import com.aliyun.openservices.ons.api.transaction.LocalTransactionExecuter;
 import com.aliyun.openservices.ons.api.transaction.TransactionProducer;
 import com.aliyun.openservices.ons.api.transaction.TransactionStatus;
-import com.aliyun.openservices.tcp.example.MqConfig;
+import com.aliyun.openservices.tcp.MqConfig;
 
 import java.util.Date;
 import java.util.Properties;

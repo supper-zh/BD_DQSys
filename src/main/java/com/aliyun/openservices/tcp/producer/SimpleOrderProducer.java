@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.aliyun.openservices.tcp.example.producer;
+package com.aliyun.openservices.tcp.producer;
 
 import com.aliyun.openservices.ons.api.Message;
 import com.aliyun.openservices.ons.api.ONSFactory;
@@ -21,7 +21,7 @@ import com.aliyun.openservices.ons.api.PropertyKeyConst;
 import com.aliyun.openservices.ons.api.SendResult;
 import com.aliyun.openservices.ons.api.exception.ONSClientException;
 import com.aliyun.openservices.ons.api.order.OrderProducer;
-import com.aliyun.openservices.tcp.example.MqConfig;
+import com.aliyun.openservices.tcp.MqConfig;
 
 import java.util.Date;
 import java.util.Properties;

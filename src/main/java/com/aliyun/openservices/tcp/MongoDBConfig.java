@@ -1,4 +1,4 @@
-package com.aliyun.openservices.tcp.example;
+package com.aliyun.openservices.tcp;
 
 public class MongoDBConfig {
     public static final String HOST = "localhost";
@@ -23,6 +23,7 @@ public class MongoDBConfig {
         return COLLECTION;
     }
 
+    // 从属性文件中加载配置：
     // private String host;
     // private int port;
     // private String database;

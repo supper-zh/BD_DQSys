@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.aliyun.openservices.tcp.example.producer;
+package com.aliyun.openservices.tcp.producer;
 
 import com.aliyun.openservices.ons.api.*;
 import com.aliyun.openservices.ons.api.exception.ONSClientException;
-import com.aliyun.openservices.tcp.example.MqConfig;
+import com.aliyun.openservices.tcp.MqConfig;
 
 import java.util.Date;
 import java.util.Properties;

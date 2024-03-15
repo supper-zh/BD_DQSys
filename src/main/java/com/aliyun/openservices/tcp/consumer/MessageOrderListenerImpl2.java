@@ -1,11 +1,11 @@
-package com.aliyun.openservices.tcp.example.consumer;
+package com.aliyun.openservices.tcp.consumer;
 
 import com.aliyun.openservices.ons.api.Message;
 import com.aliyun.openservices.ons.api.order.ConsumeOrderContext;
 import com.aliyun.openservices.ons.api.order.MessageOrderListener;
 import com.aliyun.openservices.ons.api.order.OrderAction;
-import com.aliyun.openservices.tcp.example.MongoDBConfig;
-import com.aliyun.openservices.tcp.example.MongoDbClient;
+import com.aliyun.openservices.tcp.MongoDBConfig;
+import com.aliyun.openservices.tcp.MongoDbClient;
 import com.mongodb.MongoException;
 import com.mongodb.MongoWriteException;
 import com.mongodb.client.MongoClient;

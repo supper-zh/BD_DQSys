@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.aliyun.openservices.tcp.example.consumer;
+package com.aliyun.openservices.tcp.consumer;
 
 import com.aliyun.openservices.ons.api.Consumer;
 import com.aliyun.openservices.ons.api.ONSFactory;
 import com.aliyun.openservices.ons.api.PropertyKeyConst;
-import com.aliyun.openservices.tcp.example.MqConfig;
+import com.aliyun.openservices.tcp.MqConfig;
 
 import java.util.Properties;
 

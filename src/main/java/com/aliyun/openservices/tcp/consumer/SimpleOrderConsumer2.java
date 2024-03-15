@@ -25,7 +25,7 @@ import java.util.Properties;
 /**
  * MQ 接收消息示例 Demo
  */
-public class SimpleOrderConsumer {
+public class SimpleOrderConsumer2 {
 
     public static void main(String[] args) {
         Properties consumerProperties = new Properties();
@@ -43,7 +43,7 @@ public class SimpleOrderConsumer {
 		// 			System.out.println(body);
         //
 		// 		} catch (UnsupportedEncodingException e) {
-		// 			// TODO Auto-generated catch block
+		// 			TODO Auto-generated catch block
 		// 			e.printStackTrace();
 		// 		}
         //         return OrderAction.Success;
@@ -51,8 +51,8 @@ public class SimpleOrderConsumer {
         // });
 
         // 使用重新实现的MessageOrderListener
-        consumer.subscribe(MqConfig.ORDER_TOPIC, MqConfig.TAG,  new MessageOrderListenerImpl());
-        // consumer.subscribe(MqConfig.ORDER_TOPIC, MqConfig.TAG,  new MessageOrderListenerImpl2());
+        // consumer.subscribe(MqConfig.ORDER_TOPIC, MqConfig.TAG,  new MessageOrderListenerImpl());
+        consumer.subscribe(MqConfig.ORDER_TOPIC, MqConfig.TAG,  new MessageOrderListenerImpl2());
 
         consumer.start();
         System.out.println("Consumer start success.");
