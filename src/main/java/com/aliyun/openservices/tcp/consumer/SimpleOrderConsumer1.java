@@ -15,22 +15,17 @@
  */
 package com.aliyun.openservices.tcp.consumer;
 
-import com.aliyun.openservices.ons.api.Message;
 import com.aliyun.openservices.ons.api.ONSFactory;
 import com.aliyun.openservices.ons.api.PropertyKeyConst;
-import com.aliyun.openservices.ons.api.order.ConsumeOrderContext;
-import com.aliyun.openservices.ons.api.order.MessageOrderListener;
-import com.aliyun.openservices.ons.api.order.OrderAction;
 import com.aliyun.openservices.ons.api.order.OrderConsumer;
 import com.aliyun.openservices.tcp.MqConfig;
 
-import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
 /**
  * MQ 接收消息示例 Demo
  */
-public class SimpleOrderConsumer {
+public class SimpleOrderConsumer1 {
 
     public static void main(String[] args) {
         Properties consumerProperties = new Properties();
@@ -40,24 +35,24 @@ public class SimpleOrderConsumer {
         consumerProperties.setProperty(PropertyKeyConst.NAMESRV_ADDR, MqConfig.NAMESRV_ADDR);
         OrderConsumer consumer = ONSFactory.createOrderedConsumer(consumerProperties);
 
-        consumer.subscribe(MqConfig.ORDER_TOPIC, MqConfig.TAG,  new MessageOrderListener() {
-            @Override
-            public OrderAction consume(final Message message, final ConsumeOrderContext context) {
-            	try {
-					String body = new String(message.getBody(),"UTF-8");
-					System.out.println(body);
-
-				} catch (UnsupportedEncodingException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-                return OrderAction.Success;
-            }
-        });
+        // consumer.subscribe(MqConfig.ORDER_TOPIC, MqConfig.TAG,  new MessageOrderListener() {
+        //     @Override
+        //     public OrderAction consume(final Message message, final ConsumeOrderContext context) {
+        //     	try {
+		// 			String body = new String(message.getBody(),"UTF-8");
+		// 			System.out.println(body);
+        //
+		// 		} catch (UnsupportedEncodingException e) {
+		// 			TODO Auto-generated catch block
+		// 			e.printStackTrace();
+		// 		}
+        //         return OrderAction.Success;
+        //     }
+        // });
 
         // 使用重新实现的MessageOrderListener
         // consumer.subscribe(MqConfig.ORDER_TOPIC, MqConfig.TAG,  new MessageOrderListenerImpl());
-        // consumer.subscribe(MqConfig.ORDER_TOPIC, MqConfig.TAG,  new MessageOrderListenerImpl1());
+        consumer.subscribe(MqConfig.ORDER_TOPIC, MqConfig.TAG,  new MessageOrderListenerImpl1());
         // consumer.subscribe(MqConfig.ORDER_TOPIC, MqConfig.TAG,  new MessageOrderListenerImpl2());
 
         consumer.start();
